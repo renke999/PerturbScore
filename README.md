@@ -1,8 +1,8 @@
 This is the repo for the PerturbScore paper, we are hoping that the concept of studying discrete perturbations in NLP through building the connections between continuous perturbations can provide hints for future studies. The repo contains:
 
 - The [data]() used for training the PerturbScore.
-- The code for [training the PerturbScore]().
-- The code for [generating the data]().
+- The code for [training the PerturbScore](https://github.com/renke999/PerturbScore/tree/main/meta_data).
+- The code for [generating the data](https://github.com/renke999/PerturbScore/tree/main/scripts).
 
 For technical details and additional experimental results, please refer to our paper:
 
@@ -55,4 +55,4 @@ Then run the  `scripts/run_meta_net.sh` script to train PerturbScore on `imdb_be
 
 ## Data Generation Process
 
-Data Generation is a non-trival process owing to the huge searching space and multiple datasets and discrete attacking methods. We release the code for finetuning bert, extracting features from continous attacks, extracting features from discrete attacks, and we use a grid search implementation to generate the data for efficiency and simlicity. See [scripts/README.md]() for more details.
+Data Generation is a non-trival process owing to the huge searching space and multiple datasets and discrete attacking methods. We release the code for finetuning bert, extracting features from continous attacks, extracting features from discrete attacks, and we use a grid search implementation to generate the data for efficiency and simlicity. See [scripts/README.md](https://github.com/renke999/PerturbScore/blob/main/scripts/README.md) for more details.
