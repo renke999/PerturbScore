@@ -1,6 +1,6 @@
 This is the repo for the PerturbScore paper, we are hoping that the concept of studying discrete perturbations in NLP through building the connections between continuous perturbations can provide hints for future studies. The repo contains:
 
-- The [data]() used for training the PerturbScore.
+- The [data](https://github.com/renke999/PerturbScore/tree/main/meta_data) used for training the PerturbScore.
 - The code for [training the PerturbScore](https://github.com/renke999/PerturbScore/tree/main/meta_data).
 - The code for [generating the data](https://github.com/renke999/PerturbScore/tree/main/scripts).
 
