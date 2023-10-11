@@ -12,7 +12,7 @@ PerturbScore: Connecting Discrete and Continuous Perturbations in NLP. In the Fi
 
 ## Data release
 
-We release our PerturbScore dataset under the `meta_data` folder. The `perprocessed_data.csv` is the raw data file, we then randomly select 80% data tuples as the training set(`train_data.csv`) and 20% as the test set(`test_data.csv`). These CSV files contain the following fields:
+We release our PerturbScore dataset under the [meta_data](https://github.com/renke999/PerturbScore/tree/main/meta_data) folder. The `perprocessed_data.csv` is the raw data file, we then randomly select 80% data tuples as the training set(`train_data.csv`) and 20% as the test set(`test_data.csv`). These CSV files contain the following fields:
 
 - raw: `str`, The raw sentence in the dataset.
 - attacked: `str`, The sentence after the discrete attack using textattack.
