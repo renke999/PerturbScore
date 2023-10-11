@@ -1,4 +1,4 @@
-This is the repo for the PerturbScore paper, we are hoping that the concept of studying discrete perturbations in NLP through building the connections between continuous perturbations can provide hints for future studies. The repo contains:
+This is the official repo of our paper [PerturbScore: Connecting Discrete and Continuous Perturbations in NLP]() to appear in EMNLP 2023 findings, we are hoping that the concept of studying discrete perturbations in NLP through building the connections between continuous perturbations can provide hints for future studies. The repo contains:
 
 - The [data](https://github.com/renke999/PerturbScore/tree/main/meta_data) used for training the PerturbScore.
 - The code for [training the PerturbScore](https://github.com/renke999/PerturbScore/tree/main/meta_data).
@@ -12,7 +12,7 @@ PerturbScore: Connecting Discrete and Continuous Perturbations in NLP. In the Fi
 
 ## Data release
 
-We release our PerturbScore dataset under the `meta_data` folder. The `perprocessed_data.csv` is the raw data file, we then ramdomly select 80% data tuples as the training set(`train_data.csv`) and 20% as the test set(`test_data.csv`). These CSV files contain the following fields:
+We release our PerturbScore dataset under the `meta_data` folder. The `perprocessed_data.csv` is the raw data file, we then randomly select 80% data tuples as the training set(`train_data.csv`) and 20% as the test set(`test_data.csv`). These CSV files contain the following fields:
 
 - raw: `str`, The raw sentence in the dataset.
 - attacked: `str`, The sentence after the discrete attack using textattack.
@@ -29,15 +29,15 @@ We release our PerturbScore dataset under the `meta_data` folder. The `perproces
 
 The naming rule for the subfolders is `{dataset_model_discrete-attack}`:
 
-- dataset: `['imdb', 'agnews']`, which is the dataset used to train bert.
-- Model: `['bert', 'freelb']`, `bert` is the finetuned bert model whie `freelb` is the adversially trained bert model using `FreeLB` method.
+- dataset: `['imdb', 'agnews']`, the dataset used to train bert.
+- Model: `['bert', 'freelb']`, `bert` is the finetuned bert model while `freelb` is the adversially trained bert model using the `FreeLB` method.
 - discrete-attack: `['rand', 'textfooler']`, `rand` is the random attack method while `textfooler` is the `textfooler` attack method. 
 
 
 
 ## PerturbScore Training
 
-We use the released data above to train our PerturbScore. Specifically, we use `model_input` and `epsilon`field to train our PerturbScore, other filelds are just for data integrity and reliability. 
+We use the released data above to train our PerturbScore. Specifically, we use `model_input` and `epsilon`field to train our PerturbScore, other fields are just for data integrity and reliability. 
 
 To reproduce our training process, first install the requirements
 
@@ -45,7 +45,7 @@ To reproduce our training process, first install the requirements
 pip install -r requirements.txt
 ```
 
-Then run the  `scripts/run_meta_net.sh` script to train PerturbScore on `imdb_bert_rand` dataset, Feel free to uncomment the script to train other models you want.
+Then run the  `scripts/run_meta_net.sh` script to train PerturbScore on the `imdb_bert_rand` dataset, Feel free to uncomment the script to train other models you want.
 
 ```bash
 ./scripts/run_meta_net.sh
@@ -55,4 +55,4 @@ Then run the  `scripts/run_meta_net.sh` script to train PerturbScore on `imdb_be
 
 ## Data Generation Process
 
-Data Generation is a non-trival process owing to the huge searching space and multiple datasets and discrete attacking methods. We release the code for finetuning bert, extracting features from continous attacks, extracting features from discrete attacks, and we use a grid search implementation to generate the data for efficiency and simlicity. See [scripts/README.md](https://github.com/renke999/PerturbScore/blob/main/scripts/README.md) for more details.
+Data Generation is a non-trivial process owing to the huge search space and multiple datasets and discrete attacking methods. We release the code for finetuning bert, extracting features from continuous attacks, extracting features from discrete attacks, and we use a grid search implementation to generate the data for efficiency and simlicity. See [scripts/README.md](https://github.com/renke999/PerturbScore/blob/main/scripts/README.md) for more details.
