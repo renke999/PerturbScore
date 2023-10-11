@@ -29,10 +29,12 @@ function runexp {
 }
 
 #runexp    gpu    type                        max_len
+
+########################## PerturbScorer training and evaluation ##########################
 runexp     1      imdb_bert_rand              512
 #runexp     1      imdb_bert_textfooler        512
-#runexp     1      imdb_freelb_rand              512
-#runexp     1      imdb_freelb_textfooler        512
+#runexp     1      imdb_freelb_rand            512
+#runexp     1      imdb_freelb_textfooler      512
 #runexp     1      agnews_bert_rand            128
 #runexp     1      agnews_bert_textfooler      128
 #runexp     1      agnews_freelb_rand          128

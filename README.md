@@ -10,7 +10,7 @@ PerturbScore: Connecting Discrete and Continuous Perturbations in NLP. In the Fi
 
 
 
-## Data release
+## Data Release
 
 We release our PerturbScore dataset under the [meta_data](https://github.com/renke999/PerturbScore/tree/main/meta_data) folder. The `perprocessed_data.csv` is the raw data file, we then randomly select 80% data tuples as the training set(`train_data.csv`) and 20% as the test set(`test_data.csv`). These CSV files contain the following fields:
 
@@ -35,7 +35,7 @@ The naming rule for the subfolders is `{dataset_model_discrete-attack}`:
 
 
 
-## PerturbScore Training
+## PerturbScore Training And Evaluation
 
 We use the released data above to train our PerturbScore. Specifically, we use `model_input` and `epsilon`field to train our PerturbScore, other fields are just for data integrity and reliability. 
 
@@ -45,12 +45,16 @@ To reproduce our training process, first install the requirements
 pip install -r requirements.txt
 ```
 
-Then run the  `scripts/run_meta_net.sh` script to train PerturbScore on the `imdb_bert_rand` dataset, Feel free to uncomment the script to train other models you want.
+Then run the  `scripts/run_meta_net.sh` script to train PerturbScore on the `imdb_bert_rand` dataset, Feel free to uncomment the script to train other models you want. This script will help you train and evaluate the model.
 
 ```bash
 ./scripts/run_meta_net.sh
 ```
 
+If you want to evaluate the trained PerturbScorer against a given dataset, run the `scripts/run_evaluation.sh` script where you should specify the model and dataset path. The script will output the Kendall's tau and Spearman's (rho) rank correlation coefficient between our PerturbScorer and max norm range Epsilon, it can also help you evaluate the cross-pertrubation/dataset/model generalization ability of our PerturbScorer. 
+```bash
+./scripts/run_evaluation.sh
+```
 
 
 ## Data Generation Process
