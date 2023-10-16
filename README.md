@@ -63,7 +63,7 @@ Data Generation is a non-trivial process owing to the huge search space and mult
 ## Citation
 
 If you find PerturbScore useful for your research and applications, please cite using the Bibtex:
-
+```text
 @misc{li2023perturbscore,
       title={PerturbScore: Connecting Discrete and Continuous Perturbations in NLP}, 
       author={Linyang Li and Ke Ren and Yunfan Shao and Pengyu Wang and Xipeng Qiu},
@@ -72,3 +72,4 @@ If you find PerturbScore useful for your research and applications, please cite 
       archivePrefix={arXiv},
       primaryClass={cs.CL}
 }
+```
