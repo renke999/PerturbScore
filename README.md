@@ -4,9 +4,7 @@ This is the official repo of our paper [PerturbScore: Connecting Discrete and Co
 - The code for [training the PerturbScore](https://github.com/renke999/PerturbScore/tree/main/meta_data).
 - The code for [generating the data](https://github.com/renke999/PerturbScore/tree/main/scripts).
 
-For technical details and additional experimental results, please refer to our paper:
-
-[PerturbScore: Connecting Discrete and Continuous Perturbations in NLP](https://arxiv.org/abs/2310.08889). In the Findings of EMNLP 2023
+For technical details and additional experimental results, please refer to our paper.
 
 
 
