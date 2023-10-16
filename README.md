@@ -58,3 +58,17 @@ If you want to evaluate the trained PerturbScorer against a given dataset, run t
 ## Data Generation Process
 
 Data Generation is a non-trivial process owing to the huge search space and multiple datasets and discrete attacking methods. We release the code for finetuning bert, extracting features from continuous attacks, extracting features from discrete attacks, and we use a grid search implementation to generate the data for efficiency and simlicity. See [scripts/README.md](https://github.com/renke999/PerturbScore/blob/main/scripts/README.md) for more details.
+
+
+## Citation
+
+If you find PerturbScore useful for your research and applications, please cite using the Bibtex:
+
+@misc{li2023perturbscore,
+      title={PerturbScore: Connecting Discrete and Continuous Perturbations in NLP}, 
+      author={Linyang Li and Ke Ren and Yunfan Shao and Pengyu Wang and Xipeng Qiu},
+      year={2023},
+      eprint={2310.08889},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
