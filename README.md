@@ -12,24 +12,24 @@ For technical details and additional experimental results, please refer to our p
 
 We release our PerturbScore dataset under the [meta_data](https://github.com/renke999/PerturbScore/tree/main/meta_data) folder. The `perprocessed_data.csv` is the raw data file, we then randomly select 80% data tuples as the training set(`train_data.csv`) and 20% as the test set(`test_data.csv`). These CSV files contain the following fields:
 
-- raw: `str`, The raw sentence in the dataset.
-- attacked: `str`, The sentence after the discrete attack using textattack.
-- epsilon: `float`， The continuous max norm ball $\epsilon$.
-- timestep: `int`, The number of attack steps in the discrete attack.
-- cont_sim: `float`, $cos(f_\theta(X+\delta), f_\theta(X))$
-- disc_sim: `float`, $cos(f_\theta(S+P(S)), f_\theta(S))$
-- difference: `float`, Measuring the cosine similarity difference between discrete and continuous perturbations.
-- model_input: `str`, The  sentence constructed as input for training PerturbScore.
-- bert_score_precision: `float`, the precision of $BertScore(S+P(S), S)$
-- bert_score_recall: `float`, the recall of $BertScore(S+P(S), S)$
-- bert_score_f1: `float`, the f1 score of $BertScore(S+P(S), S)$
-- use_sim: `float`, the universal sentence encoder output of $USE(S+P(S),S)$
+- `raw`: `str`, The raw sentence in the dataset.
+- `attacked`: `str`, The sentence after the discrete attack using textattack.
+- `epsilon`: `float`， The continuous max norm ball $\epsilon$.
+- `timestep`: `int`, The number of attack steps in the discrete attack.
+- `cont_sim`: `float`, $cos(f_\theta(X+\delta), f_\theta(X))$
+- `disc_sim`: `float`, $cos(f_\theta(S+P(S)), f_\theta(S))$
+- `difference`: `float`, Measuring the cosine similarity difference between discrete and continuous perturbations.
+- `model_input`: `str`, The  sentence constructed as input for training PerturbScore.
+- `bert_score_precision`: `float`, the precision of $BertScore(S+P(S), S)$
+- `bert_score_recall`: `float`, the recall of $BertScore(S+P(S), S)$
+- `bert_score_f1`: `float`, the f1 score of $BertScore(S+P(S), S)$
+- `use_sim`: `float`, the universal sentence encoder output of $USE(S+P(S),S)$
 
 The naming rule for the subfolders is `{dataset_model_discrete-attack}`:
 
-- dataset: `['imdb', 'agnews']`, the dataset used to train bert.
-- Model: `['bert', 'freelb']`, `bert` is the finetuned bert model while `freelb` is the adversially trained bert model using the `FreeLB` method.
-- discrete-attack: `['rand', 'textfooler']`, `rand` is the random attack method while `textfooler` is the `textfooler` attack method. 
+- `dataset`: `['imdb', 'agnews']`, the dataset used to train bert.
+- `Model`: `['bert', 'freelb']`, `bert` is the finetuned bert model while `freelb` is the adversially trained bert model using the `FreeLB` method.
+- `discrete-attack`: `['rand', 'textfooler']`, `rand` is the random attack method while `textfooler` is the `textfooler` attack method. 
 
 
 
