@@ -1,3 +1,5 @@
+# PerturbScore:
+
 This is the official repo of our paper [PerturbScore: Connecting Discrete and Continuous Perturbations in NLP](https://arxiv.org/abs/2310.08889) to appear in EMNLP 2023 findings, we are hoping that the concept of studying discrete perturbations in NLP through building the connections between continuous perturbations can provide hints for future studies. The repo contains:
 
 - The [data](https://github.com/renke999/PerturbScore/tree/main/meta_data) used for training the PerturbScore.
